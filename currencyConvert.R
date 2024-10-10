@@ -1,5 +1,6 @@
 ## currency converter
 ## translates any currency value into a specified USD-equivalent (must set year)
+## also includes code to correct for purchase power parity
 
 install.packages('yahoofinancer')
 library(yahoofinancer)
@@ -52,8 +53,44 @@ for (i in 1:dim(simcosts)[1]) {
   print(i)
 }
 
-simcosts.usd23 <- data.frame('fromCurr'=simcosts$local_currencies, 
+simcosts.usd23 <- data.frame('fromyr'=year(simcosts$cost_date),
+           'fromCurr'=simcosts$local_currencies, 
            'toCurr'=rep('USD23', dim(simcosts)[1]),
            'costOrig'=simcosts$list_cost,
+           'exchRate'=ex.rate,
            'costConv'=USD23.conv)
+head(simcosts.usd23)
+
+
+
+## Correct for purchase power parity (PPP)
+## data from: https://data.worldbank.org/indicator/PA.NUS.PPP?end=2017&start=1990
+## 1990-2023
+
+PPPdat <- read.table('PPP1990_2023.csv', header=T, sep=',')
+head(PPPdat)
+
+## add country codes to simulated dataset from above
+head(simcosts.usd23)
+simcosts.usd23$ISO3 <- ifelse(simcosts.usd23$fromCurr == 'CAD', 'CAN', NA)
+simcosts.usd23$ISO3 <- ifelse(simcosts.usd23$fromCurr == 'JPY', 'JPN', simcosts.usd23$ISO3)
+simcosts.usd23$ISO3 <- ifelse(simcosts.usd23$fromCurr == 'GBP', 'GBR', simcosts.usd23$ISO3)
+head(simcosts.usd23)
+
+PPPval <- rep(NA,dim(simcosts.usd23)[1])
+for (c in 1:dim(simcosts.usd23)[1]) {
+  pppyr <- ifelse(simcosts.usd23$fromyr[c] == 2024, 2023, simcosts.usd23$fromyr[c])
+  pppcntry <- simcosts.usd23$ISO3[c]
+  
+  PPProw <- which(PPPdat$ISO3 == pppcntry)
+    PPProw <- ifelse(length(PPProw)==0, which(PPPdat$ISO3=="USA"), PPProw)
+  PPPcol <- which(colnames(PPPdat) == paste('X',pppyr,sep=""))
+    PPPcol <- ifelse(length(PPPcol)==0, dim(PPPdat)[2], PPPcol)
+  PPPval[c] <- PPPdat[PPProw, PPPcol]
+}
+PPPval[is.na(PPPval) == T] <- 1
+simcosts.usd23$PPP <- PPPval
+head(simcosts.usd23)
+
+simcosts.usd23$costConvPPP <- simcosts.usd23$costConv*(simcosts.usd23$PPP/(1/simcosts.usd23$exchRate))
 head(simcosts.usd23)
