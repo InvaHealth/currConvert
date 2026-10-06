@@ -4,6 +4,7 @@
 
 install.packages('yahoofinancer')
 library(yahoofinancer)
+library(tidyverse)
 
 # create dummy database
 sim_count <- 100
