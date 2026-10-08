@@ -59,8 +59,9 @@ USDyr <- 2023
 
 ## use consumer price index to convert past USD to 2023 USD equivalents
 ## using package fredr (Federal Reserve Bank of St. Louis)
-setDefaults(getSymbols.FRED, api.key = "606737389899652f38745672963c02fb")
-fredr_set_key("606737389899652f38745672963c02fb")
+## see https://fred.stlouisfed.org/docs/api/api_key.html to obtain your API key (free)
+setDefaults(getSymbols.FRED, api.key = "YOUR_FRED_API_KEY")
+fredr_set_key("YOUR_FRED_API_KEY")
 
 cpi <- fredr(
     series_id = "CPIAUCSL",
