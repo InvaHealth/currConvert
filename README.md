@@ -24,10 +24,10 @@ Accompanies paper:<br>
 <br>
 Latombe G, Diagne C, <em>et al</em>. 2026. <em>InvaHealth</em> — a database of global human health costs from biological invasions. <em>Scientific Data</em> in preparation
 
-## <a href="https://github.com/cjabradshaw/InvaCostDamMgmRatio/tree/main/scripts">Scripts</a>
+## Scripts
 - <code>currencyConvert.R</code>: main R code for analysis
 
-## <a href="https://github.com/cjabradshaw/InvaCostDamMgmRatio/tree/main/data">Data</a>
+## Data
 - <em>PPP1990_2023.csv</em>: purchasing power parity conversion values (source: <a href="https://data.worldbank.org/">World Bank</a>)
 
 ## Required R packages
