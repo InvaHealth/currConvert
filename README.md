@@ -1,9 +1,9 @@
 # Currency converter
 Converts any currency value into a specified USD-equivalent (set year; in this example, it is 2023 US$). Also includes code to correct for purchase power parity (conversion to international dollars). Use the <code>currencyConvert.R</code> script attached.
 
-<br>
 #### Investigators
-- <a href="https://www.research.ed.ac.uk/en/persons/guillaume-latombe">Guillaume Latombe</a>, University of Edinburgh<br><br><br>
+
+- <a href="https://www.research.ed.ac.uk/en/persons/guillaume-latombe">Guillaume Latombe</a>, University of Edinburgh
 - <a href="https://scholar.google.com/citations?user=Nyeg3eIAAAAJ&hl=fr">Christophe Diagne</a>, Institut de recherche pour le développement<br><br><br>
 - <a href="https://scholar.google.com/citations?user=dH_qGsMAAAAJ&hl=es">Elena Angulo</a>, Consejo Superior de Investigaciones Científicas
 - <a href="https://globalecologyflinders.com/people/#CJAB">Corey Bradshaw</a>, Flinders University
@@ -16,6 +16,7 @@ Converts any currency value into a specified USD-equivalent (set year; in this e
 - <a href="https://scholar.google.it/citations?user=TYPnVQ0AAAAJ&hl=it">David Roiz</a>, Institut de recherche pour le développement
 - <a href="https://github.com/LouisSimon862">Louis Simon</a>, Queen's University Belfast
 - <a href="https://scholar.google.com/citations?user=59VAYs4AAAAJ&hl=en">Anna Turbelin</a>, Natural Resources Canada
+
 <br>
 Accompanies paper:<br>
 <br>
