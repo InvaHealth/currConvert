@@ -32,7 +32,8 @@ Latombe G, Diagne C, <em>et al</em>. 2026. <em>InvaHealth</em> — a database of
 
 ## Required R packages
 <code>countrycode</code>, <code>dplyr</code>, <code>fredr</code>, <code>quantmod</code>, <code>tidyverse</code>, <code>yahoofinancer</code>
-
+<br>
+<br>
 <p></p><a href="https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/"><img src="https://github.com/InvaHealth/.github/blob/main/profile/www/CESABlogo.png" alt="" width="200" align="left" /></a>
 <a href="https://www.fondationbiodiversite.fr/"><img src="https://github.com/InvaHealth/.github/blob/main/profile/www/FRBlogo.png" alt="" width="150" align="left" /></a>
 <a href="https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/invahealth/"><img src="https://github.com/InvaHealth/.github/blob/main/profile/www/InvaHealth logo.jpg" alt="" width="150" align="left" /></a></p>
