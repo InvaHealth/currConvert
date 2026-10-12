@@ -4,7 +4,7 @@ Converts any currency value into a specified USD-equivalent (set year; in this e
 #### Investigators
 
 - <a href="https://www.research.ed.ac.uk/en/persons/guillaume-latombe">Guillaume Latombe</a>, University of Edinburgh
-- <a href="https://scholar.google.com/citations?user=Nyeg3eIAAAAJ&hl=fr">Christophe Diagne</a>, Institut de recherche pour le développement<br><br><br>
+- <a href="https://scholar.google.com/citations?user=Nyeg3eIAAAAJ&hl=fr">Christophe Diagne</a>, Institut de recherche pour le développement
 - <a href="https://scholar.google.com/citations?user=dH_qGsMAAAAJ&hl=es">Elena Angulo</a>, Consejo Superior de Investigaciones Científicas
 - <a href="https://globalecologyflinders.com/people/#CJAB">Corey Bradshaw</a>, Flinders University
 - <a href="https://www.biodiversitydynamics.fr/franck-courchamp/">Franck Courchamp</a>, Université Paris-Saclay
